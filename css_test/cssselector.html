@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+	<html>
+	<head>
+		<meat charset="utf-8"><meta>
+		<title>CSS</title>
+		<style type="text/css">
+			.title{font-weight:blod;font-size:20px}
+			.content{padding:10px;border:1px dashed blue;margin-top:10px;margin-bottom:10px}
+			.keyword{color:red}
+			.box{
+				/*position: absolute;left:200px;top:50px;*/
+				/*absolute絕對定位:放在任一位置都不影響版面.因為位置是固定的*/
+				position: relative;left:200px;top:50px;
+				/*relative相對定位:以原始位置當基準點做位移,原空間還是會被留白.*/
+				width:100px;height: 100px;background-color: green}
+		</style>
+	</head>
+	<body>
+		<div class="title">今天天氣不錯</div>
+		<div class="content">我去公園餵<span class="keyword">鴿子</span><br/>
+			覺得鴿子好可愛。
+		</div>
+		<div class="box"></div>
+		<div class="title">公園有很多小朋友<span style="position: relative;top:-5px;">2</span>在玩耍</div>
+		<div class="content">
+		小朋友很可愛</span>
+		</div>
+	</body>
+</html>

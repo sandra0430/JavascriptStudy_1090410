@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+	<html>
+	<head>
+		<!--flexbox 介紹 https://dotblogs.com.tw/Leo_CodeSpace/2018/05/02/154954-->
+		<meta charset="utf-8"></meta>
+		<title>CSS3 Flexbox</title>
+		<link  href="cssflex.css" rel="stylesheet" type="text/css" media="all">
+		
+	</head>
+	 <!--margin:0px;若未設定,則與上方會有一小段空白-->
+	<body style="margin:0px;background-color:#eeeeee;">
+		<!--nav 簡單來說：只要是跟主網站相關的導航連結就該放在 nav 。例如 以blog來說, menu 連到分頁的連結就該包在 nav。-->
+		<!--
+			語意標籤的使用時機 / 意義
+<header>：網頁的標頭，通常放置網站標題。
+<nav>：網頁的選單、導覽。
+<main>：網頁的主要內容。
+<aside>：網頁的側欄、附加內容。
+<article>：一篇文章內容。
+<section>：自訂的區塊，例如數篇摘要組成的空間。
+<footer>：網頁的頁尾，通常放置聯絡方式、著作權宣告等等。
+<mark>：強調一小塊內容。
+<time>：顯示日期時間
+		-->
+		<nav ><!-- style="display:none;" 先藏起來-->
+			<div class="logo">Logo</div>
+			<div class="menu">Menu</div>
+			<div class="user">User</div>
+		</nav>
+		<!--RWD 回應式設定
+			1200px 以上:4欄, 固定尺寸
+			500-1200px 以上:2欄, 彈性尺寸
+			500px 以下:1欄, 彈性尺寸
+
+		-->
+		<main> <!--main網頁的主要內容, 是容器, 內含項目-->
+			<div class="item">News 1</div>
+			<div class="item">News 2
+				<br/>Today is a good day!
+				<br/>Today is a good day!</div>
+			<div class="item">News 3</div>
+			<div class="item">News 4</div>
+		</main>
+	</body>
+
+</html>

@@ -1,0 +1,56 @@
+body{
+	margin: 0px;
+}
+/*nav 樣式設定*/
+nav{
+	display: flex; 
+}
+/*https://pjchender.blogspot.com/2015/07/css.html
+nav>.logo{ } > 只影響直接的小孩(<nav>下,class=logo)
+nav> logo{ } > 沒有指定要直接的小孩，所以只要是nav container裡面，所有clss=logo的內容都會改變
+nav{} >所nav container裡面的內容都會改變(繼承)
+*/
+/*
+nav>.logo{
+	/*沒彈性, 固定尺寸*/
+	/*flex:none;	width: 100px;
+	background-color: #ffcccc;
+}
+*/
+/*
+nav>.menu{
+	/*盡量把容器的容間放滿*/
+	/*flex:auto;
+	background-color: #ccccff;
+}*/
+/*
+nav>.user{
+	flex:none;
+	width: 100px;
+	background-color: #ccffcc;
+}*/
+/*main樣式設定*/
+main{/*容器*/
+	display: flex;/*設定此項+子項設定flex:none;,則子項可並排(切欄)*/
+	flex-wrap:wrap; /*需做此設定,容器內的子項才會有換行的動作*/
+ 	justify-content: center;	/*justify-content專門搭配flex用. 子項內容會置中,水平對齊*/
+ 	/*justify-content: flex-start; 靠左(由左至右)*/
+ 	/*justify-content: flex-end; 靠右*/
+ 	/*align-items: stretch;/*align-items專門搭配flex用. 依最高的容器為準, 所有的容器都延展同高*/ 
+ 	/*align-items: center;依最高的容器為準, 其他的容器不同高者,垂直靠中對齊*/ 
+ 	/*align-items: flex-start;依最高的容器為準, 其他的容器不同高者,垂直對齊靠上方*/
+ 	/*align-items: flex-end;依最高的容器為準, 其他的容器不同高者,垂直對齊靠下方*/ 
+	background-color: #cccccc;
+}
+main>.item{/*項目*/
+	flex:none;/*表這個項目無法彈性自動縮放*/
+	width: 270px;
+	margin:10px;
+	background-color: #ffcccc;
+}
+@media screen and (max-width:500px){
+    main>.item{width:90%;}
+}
+@media screen and (max-width:1200px){
+    main>.item{width:45%;}
+}

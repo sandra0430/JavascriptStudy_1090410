@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>自動排程 Schedule</title>
+	<script type="text/javascript"> 
+		var timmer;
+		
+		function init(){
+			timmer = document.getElementById("timer");
+			//系統在一秒之後, 執行countdown函式
+			//window.setTimeout(countdown/*函式*/,1000 /*千分之一秒*/);
+			//系統每秒鐘執行一次countdown函式
+			window.setInterval(countdown/*函式*/,1000 /*千分之一秒*/);
+		}
+		function countdown(){
+			timmer.innerHTML=timmer.innerHTML-1;
+			if (timmer.innerHTML<=0){document.location="https://www.google.com.tw";}
+			
+			//if (timmer.innerHTML>0)
+			//{			
+			//	window.setTimeout(countdown/*函式*/,1000 /*千分之一秒*/);
+			//}
+			//else
+			//{
+				//網頁導向.
+			//	document.location="https://www.google.com.tw";
+			//}
+			
+		}
+	</script>
+</head>
+<body onload="init();">
+	<span id="timer">3</span>
+</body>
+</html>

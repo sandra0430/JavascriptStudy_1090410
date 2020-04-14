@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>AJAX</title>
+	<script type="text/javascript"> 
+		function getData(moviename){
+		//XMLHttpRequest 原生物件專門用來和伺服器做連線.
+			var req =new XMLHttpRequest();
+			req.open("get", "http://127.0.0.1:8887/"+ moviename);
+			req.send();//送出連線
+			req.onload=function(){//load事件,偵測連線狀態結束
+				//連線完成,做連線後的事
+				//alert(this.responseText);
+				 var content = document.getElementById("content");
+				 content.innerHTML= this.responseText;
+			}
+		}
+	</script>
+	
+</head>
+<body onload="getData('popular.html');">
+	<div>
+		<span onclick="getData('popular.html');">熱門</span>
+		<span onclick="getData('lastest.html');">最新</span>
+		<hr/>
+		<div id="content"></div>
+	</div>
+</body>
+</html>

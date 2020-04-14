@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>宣告提升Hoising</title>
+	<script type="text/javascript"> 
+		//var x;
+		//x=10;
+		//alert(x);
+		//var x;//變數宣告由前往後拉,javascript會自動提升到最前面,然後才執行
+		//var x=10;//變數宣告且同時給定初始值, 這樣會錯.因為Javascript只提升"宣告"
+		//所以執行順序會變成:
+		//var x;
+		//alert(x);
+		//x=10;
+		//function test() { //函式的宣告
+		//	alert('hello');
+		//}
+		//test();//函式的呼叫
+		
+		//也可以改成: 因為函式的宣告也會被提升到最上方.
+		//test();//函式的呼叫
+		//function test() { //函式的宣告
+		//	alert('hello');
+		//}
+		
+		//若改成底下的寫法. 則會出現問題,
+		test();
+		var test=function(){
+			alert('2');
+		}
+		// 會出現error: test is not a function
+		var test;
+		test();
+		test=function(){
+			alert('2');
+		}
+		
+	</script>
+	
+</head>
+</html>

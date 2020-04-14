@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JavaScript</title>
+	<script type="text/javascript">
+		//單行註解
+		/*
+			多行註解
+		*/
+		/*
+		//資料
+		15;//數字
+		15.55;//數字
+		"字串"; //字串
+		'字串';//字串
+		true;//boolean值
+		false;//boolean值		
+		//變數
+		var x;
+		x=15;
+		//alert(x);
+		x="HI!";
+		//alert(x);
+		var y =true;
+		//alert(y);
+		//運算子
+		var result = 15* 15;
+		//alert(result);
+		result=15/15;
+		alert(result);
+		result--;//變數-1,並存回變數 和這個算式一樣, result=result-1;
+		alert(result);
+		result++;//變數+1,並存回變數 和這個算式一樣, result=result+1
+		alert(result);
+		
+		result=4>3; //result=4>=3;
+		alert(result);//true
+		result=4<3; r//esult=4<=3;
+		alert(result);//false
+		
+		result=4==3;//2個==,表比較4和3是否相等
+		alert(result);//false
+		
+		var data =3;
+		var result= data*data;
+		alert(result);
+		//範例
+		//輸入 prompt(提示語,預設值) ->程式運算-輸出 alert;
+		var x=prompt('請輸入數字',7);
+		x=Number(x)+100;//若不用Number把X包起來,會把X當成文字,變成文字串連
+		alert(x);
+		*/
+		
+		/*if () {
+		}
+		var money = prompt("HOW MUCH?", 20000);
+		if (money>80000){
+			alert("TOO MUCH");			
+		} else if (money >10000 && money<30000) {
+		
+			alert("OK");	
+		}
+		else {
+			alert("TOO LOW");
+			}
+		
+		
+
+		var n1 = prompt("NUMBER1:", "");
+		var n2 = prompt("NUMBER2:", "");
+		var n3 = prompt("+ 或 - 或 * 或 / ", "");
+		
+		n1=Number(n1) ;		
+		n2=Number(n2) ;
+		
+		var result;
+		if (n3=="+")
+		{
+			result=n1 + n2;
+		} else if (n3 =="-"){
+			result=n1 - n2;
+		 
+		} else if (n3 =="*"){
+			result=n1 * n2;
+		}
+		  else if (n3 =="/"){
+			result=n1 / n2;
+		 
+		} else {
+			result='wrong!';
+			
+		}
+		
+		 alert(result);
+			
+		var n =0;
+		var sum=0;
+		while (n <=100)
+		{
+			sum=sum+n;
+			n++;
+			
+		}
+		alert(sum);
+		//for(初始區塊;判斷;迴圈區塊)
+		for ( i <=100 )
+		{
+			sum=sum+i; 
+			i++;
+		}
+		alert(sum);
+		*/
+		/*
+		var sum=0;
+		var i =1;
+		for (var i =1;i <=100;i++)
+		{
+			sum=sum+i; 
+		}
+		alert(sum);
+		
+		//break; 強制跳出迴圈
+		var n =0;
+		while (n<=100){
+			if (n==50)
+			{
+				break;
+			}
+			n++;
+		}
+		alert(n);
+		
+		//continue:強制進行下一次的迴圈
+			
+		var x =0;
+		for  (var n=0;n<=100;n++){
+			if (n%4==0)//25%的數字,會被4整除,則執行continue,就會回到for(即上方行),不會執行x++;
+			{
+				continue;
+			}
+			x++;
+		}
+		alert(x);
+			
+			var sum=0;
+			var n=1;
+			while(n<=50){
+				sum=sum+n;
+				n++;
+			}
+			alert(sum);
+			
+		*/
+		//內建涵式
+		//alert('xx');
+		//函式的基礎
+		/*
+		function add(a1 ,b1  ){
+			var result = a1+b1;
+			return  result;
+			//alert(message+ CCC);
+		} 
+		//設計階段
+		var t= add(1,5 );
+		alert(t);
+		//呼叫/使用階段
+		//整合範例
+		*/
+		/*
+		var add=function(n1,n2){
+			alert(n1+n2);
+		}
+		//add(31,15);
+		var test=add;
+		test(31,15);
+		var x=3;
+	    x='string';
+		x=function(){
+			alert('xx');
+		}
+		x();
+		 //函式創造新的名稱空間
+		 var x=3;//全域變數
+		 function test(){
+			//變數搜尋找先找function內,再找function外
+			var x=5;//內部的,區域變數
+			alert(x);
+		 }
+		 alert(x);//外部3
+		 test();//內部5
+		 */
+		 //建立空白物件;
+		 //var point = new Object();
+		 //建立物件的成員(屬性與方法)
+		 //point.x=3;//屬性
+		 //point.y=4; 
+		// point.getPosition = function(){//裝的是函式,則稱為方法
+		//	alert(this.x +','+ this.y);
+		 //}
+		 //使用物件
+		// alert(point.x);
+		 //alert(point.y);
+		  //point.getPosition() ;
+		 //綜合範例:遊戲中的玩家設計
+		 /*
+		 var player= new Object();
+		 player.name="xman";
+		 player.hp=100;
+		 player.fight=function(){
+			this.hp--;
+		 }
+		 player.rest=function(){
+			this.hp++;
+		 }
+		 player.report=function(){
+			alert(this.name + ":"+ this.hp);
+		 }
+		 
+		 player.fight();
+		 player.fight();
+		 player.fight();
+		 player.rest();
+		 player.report();
+		 */
+		 //建構式,建構子;
+		 //若有100個玩家?就可用建構式.
+		 function Player(sendname,sendhp){//建構式:建構物件的函式
+			//this 代表新建的空白物件.
+			this.name=sendname;
+			this.hp=sendhp;
+			this.fight=function(){
+				this.hp--;
+			};
+			this.rest=function(){
+				this.hp++;
+			};
+			this.report=function(){
+				alert(this.name +':'+this.hp);
+			};			
+		 };
+		 var p1 = new Player('John',98);
+		 p1.rest();
+		 p1.report();
+		 var p2 = new Player('Sandy',101);
+		 p2.fight();
+		 p2.report();
+		 
+		 
+	</script>
+</head>
+<body>		
+</body>
+</html>

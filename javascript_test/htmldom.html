@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	<title>JavaScript</title>
+	<script type="text/javascript">
+		//alert(window.screen.width+'x'+window.screen.height);
+		/*
+		function change(){
+			window.document.body.innerHTML="HI"; 
+		}
+		
+		function change(){
+			//var spanobj=window.document.getElementById("emotion");
+			var spanobj=document.getElementById("emotion");
+			spanobj.innerHTML="bad";
+			spanobj.style.color="red";
+			//spanobj.style.font-weight="bold";
+			spanobj.style.fontWeight="bold";//CSS若有-,javascript拿掉-,-後第一個英文字大寫
+			spanobj.style.display="none";//藏起來
+		}*/
+		function toggleMenu(num){
+			var menu=document.getElementById("menu-" + num);
+			menu.classList.toggle("hide");//toggle:切換標籤物件的"hide"物件
+			/*
+			if (menu.style.display=="none")
+			{
+				menu.style.display="block";//block:恢復原狀
+			}
+			else
+			{
+				menu.style.display="none";
+			}
+			*/
+		}
+	</script>
+<style style="text/css">
+.hide{display:none;}
+</style>
+</head>
+<body>
+	<!--
+	<div>
+		Today is a <span id="emotion">good</span> day. Let's go to movie.
+	</div>
+	<button onclick="change();">Change</change>
+	-->
+	<div onclick="toggleMenu(1);">選單的標題1</div>
+	<ul id="menu-1" >
+		<li>項目 1-1</li>
+		<li>項目 1-2</li>
+		<li>項目 1-3</li>
+	</ul>
+	<div onclick="toggleMenu(2);">選單的標題2</div>
+	<ul id="menu-2" >
+		<li>項目 2-1</li>
+		<li>項目 2-2</li>
+		<li>項目 2-3</li>
+	</ul>
+	<div onclick="toggleMenu(3);">選單的標題3</div>
+	<ul id="menu-3" >
+		<li>項目 3-1</li>
+		<li>項目 3-2</li>
+		<li>項目 3-3</li>
+	</ul>
+	
+</body>
+</html>
